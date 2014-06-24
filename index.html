@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Canvas Monster</title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="libs/kinetic-v5.1.0.min.js"></script>
+    <script src="libs/jquery-1.11.1-uncompressed.js"></script>
+</head>
+<body>
+    <div id="nav-bar">
+        <a id="nav-git-link" href="https://github.com/NikolayNanev/DrawApplicationJavaScript">Canvas Monster</a>
+    </div>
+
+    <div id="main">
+        <div id="animation-left"></div>
+        <div id="canvas-container">
+            <canvas id="canvas-view">
+                Unfortunately, your browser is currently unsupported by our web
+                application.  We are sorry for the inconvenience. Please use one of the
+                supported browsers listed below, or draw the image you want using an
+                off-line tool.
+                Supported browsers: Opera, Firefox, Safari, and Konqueror.
+            </canvas>
+            <canvas id="canvas-draw"></canvas>
+        </div>
+        <div id="animation-rigth"></div>
+    </div>
+
+    <div id="buttons">
+        <button class="btn tool" id="brush-btn">Brush</button>
+        <button class="btn tool" id="line-btn">Line</button>
+        <button class="btn tool" id="rect-btn">Rectangle</button>
+        <button class="btn tool" id="circle-btn">Circle</button>
+        <button class="btn tool" id="rubber-btn">Rubber</button>
+
+        <button class="btn action" id="clear-canvas">Clear</button>
+        
+        <label class="btn action" for="input-image">Image</label>
+        <input type="file" id="input-image"/>
+
+        <button class="btn action" id="save-image">Save</button>       
+        <br />
+
+        <label for="color-input">Change color: </label>
+        <input type="color" class="change" id="color-input"/>
+
+        <label for="width-slider">&nbsp;&nbsp;Change width: </label>
+        <input type="range" class="change" id="width-slider" min="1" max="50" step="1" value="5"/>
+        <input type="text" id="width-value"  disabled="disabled" />
+    </div>
+
+    <script src="scripts/draw.js"></script>   
+    <script src="scripts/animations.js"></script>
+</body>
+</html>
